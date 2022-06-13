@@ -17,3 +17,35 @@ body {
   font-size: 16px;
   background-color: #0d0e0e;
 }
+
+.container {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 10vh;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.new__task {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+}
+
+.new__task-input {
+  width: 100%;
+  padding: .4em .5em;
+  border-radius: 3px;
+}
+
+.new__task-add {
+  cursor: pointer;
+}

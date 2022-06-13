@@ -1,20 +1,49 @@
+@import './abstracts/functions/functions.scss'; 
+@import './abstracts/variables/variables.scss'; 
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-    text-decoration: none;
-    list-style: none;
-  }
-  
-  html {
-    font-size: 10px;
-    font-family: 'Roboto', 'sans-serif';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Roboto', 'sans-serif';
+}
+
+body {
+  line-height: 1.5;
+  font-size: 16px;
+  background-color: $clrGray;
+}
+
+.container {
+  color: $clrWhite;
+  @include flex(column, center,center);
+  position: relative;
+  top: 10vh;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.new__task {
+  @include flex(row, center, center);
+  gap: 1em;
+  width: 100%;
+
+  &-input {
+    width: 100%;
+    padding: .4em .5em;
+    border-radius: 3px;
   }
 
-  body {
-    line-height: 1.5;
-    font-size: 16px;
-    background-color: rgb(13,14,14);
+  &-add {
+    cursor: pointer
   }
-  
+}
+
