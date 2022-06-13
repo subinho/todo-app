@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style/style.css">
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='./style/style.css'>
   <title>To Do App</title>
 </head>
 <body>
-
+  <div class='container'>
+    <!-- New Task Input -->
+    <section class='new__task'>
+      <input type="text" name="" class="new__task-input" placeholder='Add new task'>
+      <svg 
+      class='new__task-add'
+      width="1em" 
+      height="1em" 
+      viewBox="0 0 416 416" 
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M416 208C416 225.69 401.67 240.01 384 240.01H240V384.01C240 401.7 225.67 416 208 416C190.33 416 176 401.7 176 384.01V240.01H32C14.33 240.01 0 225.69 0 208C0 190.31 14.33 176.01 32 176.01H176V32.01C176 14.32 190.33 0 208 0C225.67 0 240 14.32 240 32.01V176.01H384C401.7 176 416 190.3 416 208Z" fill="white"/>
+      </svg>
+    </section>
+  </div>
   <script src='app.js'></script>
 </body>
 </html>
