@@ -23,12 +23,12 @@ body {
 
 .container {
   color: $clrWhite;
-  @include flex(column, center,center);
-  position: relative;
-  top: 10vh;
+  @include flex(column, unset,center);
+  gap: 5em;
   max-width: 72rem;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 7em 3em;
+  min-height: 100vh;
 }
 
 .new__task {
@@ -40,6 +40,7 @@ body {
     width: 100%;
     padding: .4em .5em;
     border-radius: 3px;
+    outline: none;
   }
 
   &-add {
@@ -47,3 +48,48 @@ body {
   }
 }
 
+.tasks {
+  @include flex(column, center, center);
+  width: 100%;
+  
+}
+
+.task {
+  @include flex(row, space-between, center);
+  font-size: 1.6rem;
+  width: 100%;
+  border-bottom: 1px solid #202020;
+  padding: 1em 0;
+
+  &__info {
+
+    & > span {
+      margin-left: .5em;
+    }
+  }
+
+
+  &__actions {
+    @include flex(row, center, center);
+    gap: 1em;
+    &-edit, &-delete {
+      display: block; 
+    }
+  }
+}
+
+@media screen and  (max-width: 420px){
+  .new__task {
+    position: absolute;
+    bottom: 2vh;
+    max-width: 85vw;
+  }
+  .container {
+    color: #fff;
+    display: block;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 5em 3rem;
+    min-height: 100vh;
+  }
+}

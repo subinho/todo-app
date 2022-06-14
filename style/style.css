@@ -22,13 +22,13 @@ body {
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: unset;
   align-items: center;
-  position: relative;
-  top: 10vh;
+  gap: 5em;
   max-width: 72rem;
   margin: 0 auto;
-  padding: 0 3rem;
+  padding: 7em 3em;
+  min-height: 100vh;
 }
 
 .new__task {
@@ -44,8 +44,60 @@ body {
   width: 100%;
   padding: .4em .5em;
   border-radius: 3px;
+  outline: none;
 }
 
 .new__task-add {
   cursor: pointer;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  width: 100%;
+  border-bottom: 1px solid #202020;
+  padding: 1em 0;
+}
+
+.task__info > span {
+  margin-left: .5em;
+}
+
+.task__actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.task__actions-edit, .task__actions-delete {
+  display: block;
+}
+
+@media screen and (max-width: 420px) {
+  .new__task {
+    position: absolute;
+    bottom: 2vh;
+    max-width: 85vw;
+  }
+  .container {
+    color: #fff;
+    display: block;
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 5em 3rem;
+    min-height: 100vh;
+  }
 }
