@@ -66,10 +66,18 @@ const renderTasks = () => {
             inputTask.addEventListener('blur', e => {
                 inputTask.setAttribute('readonly', true)
                 todo.name = e.target.value
-                
+
                 localStorage.setItem('todoTasks', JSON.stringify(todos))
                 renderTasks()
             })
+        })
+
+        // DELETE TASK
+        deleteTask.addEventListener('click',  () => {
+            todos = todos.filter(task => task != todo)
+            
+            localStorage.setItem('todoTasks', JSON.stringify(todos))
+            renderTasks()
         })
 
     })
