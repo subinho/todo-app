@@ -43,6 +43,7 @@ const renderTasks = () => {
             inputTask.classList.add('checked')
         }
 
+        // TASK COMPLETE ?
         inputCheck.addEventListener('change', e => {
             todo.finished = e.target.checked
             
@@ -56,6 +57,19 @@ const renderTasks = () => {
 
             renderTasks()
 
+        })
+
+        //  EDIT TASK
+        editTask.addEventListener('click', e => {
+            inputTask.removeAttribute('readonly')
+            inputTask.focus()
+            inputTask.addEventListener('blur', e => {
+                inputTask.setAttribute('readonly', true)
+                todo.name = e.target.value
+                
+                localStorage.setItem('todoTasks', JSON.stringify(todos))
+                renderTasks()
+            })
         })
 
     })
