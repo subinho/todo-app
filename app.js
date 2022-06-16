@@ -39,6 +39,25 @@ const renderTasks = () => {
         task.appendChild(taskActions)
         tasks.appendChild(task)
 
+        if(todo.finished) {
+            inputTask.classList.add('checked')
+        }
+
+        inputCheck.addEventListener('change', e => {
+            todo.finished = e.target.checked
+            
+            localStorage.setItem('todoTasks', JSON.stringify(todos))
+
+            if(todo.finished) {
+                inputTask.classList.add('checked')
+            } else {
+                inputTask.classList.remove('checked')
+            }
+
+            renderTasks()
+
+        })
+
     })
 }
 
@@ -59,5 +78,5 @@ window.addEventListener('load', e => {
 
         renderTasks()
     })
-
+    
 })
