@@ -78,5 +78,5 @@ window.addEventListener('load', e => {
 
         renderTasks()
     })
-    
+    renderTasks()
 })
